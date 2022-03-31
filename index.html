@@ -12,16 +12,30 @@
         <div class="centrado">
             <h1>people entered:</h1>
             <h2   h2 id="count-el">0</h2>
-            <button id="boton">Agregar</button>
+            <div class="botones">
+                <button class="botonDisminuir" id="boton1">Disminuir</button>
+                <button class="botonAumento" id="boton2">Agregar</button>
+                <button class="reset" id="boton3">resetear</button>
+            </div>
+            
+
         </div>
         
     </div>
     <script>
-        let boton = document.getElementById('boton');
+        let boton2 = document.getElementById('boton1');
+        let boton3 = document.getElementById('boton3');
+        let boton = document.getElementById('boton2');
         let contador = document.getElementById('count-el');
         let count =0;
         boton.addEventListener('click', ()=>{
             agregarNumero();
+        })
+        boton2.addEventListener('click', ()=>{
+            disminuirNumero();
+        })
+        boton3.addEventListener('click', ()=>{
+            resetear();
         })
         
         
@@ -30,6 +44,15 @@
         function agregarNumero(){
             count=count+1;
             contador.innerText= count;
+        }
+        function disminuirNumero(){
+            if(count===0) return;
+            count =count-1;
+            contador.innerText =count;
+        }
+        function resetear(){
+            count=0;
+            contador.innerText = count;
         }
     </script>
 </body>

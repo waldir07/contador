@@ -27,7 +27,11 @@ h2{
     text-align: center;
     margin-bottom: 40px;
 }
-button{
+.botones{
+    display: flex;
+    padding: 0 5px 0 5px;
+}
+button.botonAumento, .botonDisminuir, .reset{
     text-align: center;
     margin: 0 auto;
     display: block;
@@ -45,4 +49,7 @@ button{
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-weight: bold;
     cursor: pointer;
+}
+.reset{
+    background-color: brown;
 }
